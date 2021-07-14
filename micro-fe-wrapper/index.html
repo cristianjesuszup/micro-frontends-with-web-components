@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Micro-frontends using Web Components</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .intro {
+        margin: 30px 0;
+      }
+      .repo {
+        margin: 30px 0;
+        text-align: center;
+        width: 100%;
+      }
+      .card-body {
+        width: 100%;
+        height: 350px;
+      }
+      .logo {
+        height: 200px;
+        margin-bottom: 20px;
+      }
+      .console {
+        margin-top: 20px;
+      }
+      .console h4 {
+        margin-bottom: 15px;
+        border-bottom: solid 1px #000000;
+        padding-bottom: 5px;
+      }
+      .console p {
+        font-size: 0.8em;
+      }
+    </style>
+  </head>
+
+  <body onload="tellComponents()">
+    <div>
+      <rect-web-comp>{{this.props.name}}</rect-web-comp>
+    </div>
+    <div class="container">
+      <div>Hello <rect-web-comp name="Cris">{this.props.name}</rect-web-comp>!</div>
+     
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.9.1/zone.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.2.10/custom-elements-es5-adapter.js"></script> -->
+    <!-- <script src="http://localhost:5001/main.js"></script> -->
+    <script src="http://localhost:5002/main.86521fec774a103689b0.esm.js"></script>
+    <script src="http://localhost:5002/runtime.365178a7a0f8f038a0f1.js"></script>
+  </body>
+</html>
